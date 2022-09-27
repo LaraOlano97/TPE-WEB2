@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-09-2022 a las 22:45:22
+-- Tiempo de generación: 27-09-2022 a las 21:41:09
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -45,7 +45,8 @@ CREATE TABLE `jugadores` (
   `Edad` int(11) NOT NULL,
   `Peso` int(11) NOT NULL,
   `Altura` int(11) NOT NULL,
-  `Posición` varchar(50) NOT NULL
+  `Posición` varchar(50) NOT NULL,
+  `id_equipo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -62,7 +63,8 @@ ALTER TABLE `equipos`
 -- Indices de la tabla `jugadores`
 --
 ALTER TABLE `jugadores`
-  ADD PRIMARY KEY (`id_jugador`);
+  ADD PRIMARY KEY (`id_jugador`),
+  ADD KEY `FK_id_equipo` (`id_equipo`) USING BTREE;
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -79,6 +81,16 @@ ALTER TABLE `equipos`
 --
 ALTER TABLE `jugadores`
   MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `jugadores`
+--
+ALTER TABLE `jugadores`
+  ADD CONSTRAINT `jugadores_ibfk_1` FOREIGN KEY (`id_equipo`) REFERENCES `equipos` (`id_equipo`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
