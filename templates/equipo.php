@@ -1,7 +1,11 @@
 <?php
 function showEquipos(){
     require_once 'db.php';
+    require_once('libs/smarty/Smarty.class.php');
     $db = getEquipos(); 
+    $smarty = new Smarty();
+      $smarty->assign('titulo',”Equipos”);
+     $smarty->assign('equipos', $BBDD Equipos.sql);
       ?>
     <main class="container mt-5">
         <section class="equipos">
