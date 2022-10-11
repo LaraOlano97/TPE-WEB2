@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-10-2022 a las 21:39:27
+-- Tiempo de generación: 11-10-2022 a las 22:08:02
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -93,7 +93,7 @@ CREATE TABLE `jugadores` (
   `Nombre` varchar(100) NOT NULL,
   `Edad` int(11) NOT NULL,
   `Peso` int(11) NOT NULL,
-  `Altura` int(11) NOT NULL,
+  `Altura` float NOT NULL,
   `Posición` varchar(50) NOT NULL,
   `id_equipo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -103,7 +103,18 @@ CREATE TABLE `jugadores` (
 --
 
 INSERT INTO `jugadores` (`id_jugador`, `Nombre`, `Edad`, `Peso`, `Altura`, `Posición`, `id_equipo`) VALUES
-(1, 'Nikola Jokić', 27, 115, 2, 'Pivot', 1);
+(1, 'Nikola Jokić', 27, 115, 2.13, 'Pivot', 1),
+(2, 'Jeff Green', 36, 107, 2.03, 'Alero', 1),
+(3, 'Peyton Watson', 20, 91, 2.03, 'Escolta', 1),
+(4, 'Aaron Gordon', 27, 107, 2.03, 'Ala-pivot', 1),
+(5, 'Ish Smith ', 34, 107, 1.83, 'Base', 1),
+(6, 'Leandro Bolmaro', 22, 91, 1.98, 'Alero', 2),
+(7, 'Patrick Beverley', 34, 82, 1.85, 'Base', 2),
+(8, 'Malik Beasley', 25, 85, 1.93, 'Escolta', 2),
+(9, 'Nathan Knight', 25, 115, 2.08, 'Ala-pivot', 2),
+(10, 'Naz Reid', 23, 120, 2.06, 'Pivot', 2),
+(11, 'Josh Giddey', 20, 93, 2.06, 'Base', 3),
+(12, 'Luguentz Dort', 23, 98, 1.91, 'Escolta', 3);
 
 --
 -- Índices para tablas volcadas
@@ -148,7 +159,7 @@ ALTER TABLE `equipos`
 -- AUTO_INCREMENT de la tabla `jugadores`
 --
 ALTER TABLE `jugadores`
-  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Restricciones para tablas volcadas
