@@ -1,5 +1,5 @@
 <?php
-require_once './app/views/indexView.php';
+require_once './app/view/indexView.php';
 
 
 class indexController {

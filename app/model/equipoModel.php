@@ -3,7 +3,7 @@ class equipos {
     private $db;
 
     public function __construct() {
-        $this->db = new PDO('mysql:host=localhost;'.'dbname=equipos;charset=utf8', 'root', '');
+        $this->db = new PDO('mysql:host=localhost;'.'dbname=deudas;charset=utf8', 'root', '');
     }
 
     public function obtenerEquipos(){
@@ -22,6 +22,27 @@ class equipos {
         
         return $equipo;
     }
+
+    public function ModificarEquipo($id, $nombre_eq,  $descripcion){
+        
+        
+        $sentencia = $this->db->prepare("UPDATE `equipos` SET `nombre_eq`='$nombre_eq'");
+        $sentencia->execute([$id]);
+
+   }
+
+   public function EliminarEquipo($id){
+       $sentencia = $this->db->prepare('DELETE FROM `equipos` WHERE id_eq=?');
+       $sentencia->execute([$id]);
+
+   }
+
+   public function AgregarEquipo($nombre_ej, $musculo_id, $intensidad, $seccion, $descripcion){
+       $sentencia = $this->db->prepare('INSERT INTO equipos(id_eq, nombre_eq, ) VALUES(?,?,?,?,?,?)');
+       $sentencia->execute([$this->db->lastInsertId(), $nombre_eq]);
+       
+   }
+
 
 
 

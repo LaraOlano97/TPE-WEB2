@@ -1,22 +1,28 @@
 <?php
-define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
 
-require_once './app/controllers/indexController.php';
-require_once './app/controllers/equipoController.php';
+require_once './app\controller\equipoController.php';
+
+require_once './app/controller/indexController.php';
+
+define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
 //recibir/leer la accion
+$action = 'inicio';
 if (!empty($_GET['action'])) {
-    $accion = $_GET['action'];
-} else {
-    $accion = 'equipos';
+    $action = $_GET['action'];
 }
 
 // parseo el string de action por "/" y me devuelve el arreglo
-$params = explode('/', $accion);
+$params = explode('/', $action);
+
+
+$indexController = new indexController();
+$equipoController = new equiposController();
 
 //
 switch ($params[0]) {
     case 'inicio':
+
         $indexController->Mostrar();
         break;
     case 'equipos':
@@ -24,7 +30,7 @@ switch ($params[0]) {
             $equipoController->mostrarEquipos();
             }
             else{
-                $equiposController->mostrarEquipo($params[1]);
+                $equipoController->mostrarEquipo($params[1]);
             }
             break;
     default:
