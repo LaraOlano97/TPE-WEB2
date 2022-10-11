@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-10-2022 a las 00:23:58
+-- Tiempo de generación: 11-10-2022 a las 21:39:27
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -24,13 +24,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `administradores`
+--
+
+CREATE TABLE `administradores` (
+  `id_admin` int(11) NOT NULL,
+  `Usuario` varchar(100) NOT NULL,
+  `Contraseña` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `equipos`
 --
 
 CREATE TABLE `equipos` (
   `id_equipo` int(11) NOT NULL,
-  `Zona` varchar(100) NOT NULL,
   `Nombre del Equipo` varchar(100) NOT NULL,
+  `Zona` varchar(100) NOT NULL,
   `Capitán Equipo` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -38,41 +50,70 @@ CREATE TABLE `equipos` (
 -- Volcado de datos para la tabla `equipos`
 --
 
-INSERT INTO `equipos` (`id_equipo`, `Zona`, `Nombre del Equipo`, `Capitán Equipo`) VALUES
-(1, 'Noroeste', 'Denver Nuggets', 'Nikola Jokić '),
-(2, 'Noroeste', 'Minnesota Timberwolves', 'Patrick Beverley'),
-(3, 'Noroeste', 'Oklahoma City Thunder', 'Josh Giddey'),
-(4, 'Noroeste', 'Portland Trail Blazers', 'Damian Lillard'),
-(5, 'Noroeste', 'Utah Jazz', 'Leandro Bolmaro'),
-(6, 'Suroeste', 'Dallas Mavericks', 'Luka Dončić '),
-(7, 'Suroeste', 'Houston Rockets', 'Eric Gordon'),
-(8, 'Suroeste', 'Memphis Grizzlies', 'Kennedy Chandler'),
-(9, 'Suroeste', 'New Orleans Pelicans', 'Willy Hernangómez'),
-(10, 'Suroeste', 'San Antonio Spurs', 'Doug McDermott'),
-(11, 'Pacífico', 'Golden State Warriors', 'Stephen Curry'),
-(12, 'Pacífico', 'Los Angeles Clippers', 'Reggie Jackson'),
-(13, 'Pacífico', 'Los Angeles Lakers', 'LeBron James'),
-(14, 'Pacífico', 'Phoenix Suns', 'Devin Booker '),
-(15, 'Pacífico', 'Sacramento Kings', 'Jeremy Lamb '),
-(16, 'Atlántico', 'Boston Celtics', 'Marcus Smart'),
-(17, 'Atlántico', 'Brooklyn Nets', 'Kevin Durant'),
-(18, 'Atlántico', 'New York Knicks', 'Derrick Rose'),
-(19, 'Atlántico', 'Philadelphia 76ers', 'Joel Embiid'),
-(20, 'Atlántico', 'Toronto Raptors', 'Fred VanVleet'),
-(21, 'Central', 'Chicago Bulls', 'DeMar DeRozan '),
-(22, 'Central', 'Cleveland Cavaliers', 'Ricky Rubio'),
-(23, 'Central', 'Detroit Pistons', 'Killian Hayes'),
-(24, 'Central', 'Indiana Pacers', 'Chris Duarte'),
-(25, 'Central', 'Milwaukee Bucks', 'Giannis Antetokounmpo'),
-(26, 'Sureste', 'Atlanta Hawks', 'Trae Young'),
-(27, 'Sureste', 'Charlotte Hornets', 'Cody Martin'),
-(28, 'Sureste', 'Miami Heat', 'Udonis Haslem'),
-(29, 'Sureste', 'Orlando Magic', 'Devin Cannady'),
-(30, 'Sureste', 'Washington Wizards', 'Bradley Beal');
+INSERT INTO `equipos` (`id_equipo`, `Nombre del Equipo`, `Zona`, `Capitán Equipo`) VALUES
+(1, 'Denver Nuggets', 'Noroeste', 'Nikola Jokić '),
+(2, 'Minnesota Timberwolves', 'Noroeste', 'Patrick Beverley'),
+(3, 'Oklahoma City Thunder', 'Noroeste', 'Josh Giddey'),
+(4, 'Portland Trail Blazers', 'Noroeste', 'Damian Lillard'),
+(5, 'Utah Jazz', 'Noroeste', 'Leandro Bolmaro'),
+(6, 'Dallas Mavericks', 'Suroeste', 'Luka Dončić '),
+(7, 'Houston Rockets', 'Suroeste', 'Eric Gordon'),
+(8, 'Memphis Grizzlies', 'Suroeste', 'Kennedy Chandler'),
+(9, 'New Orleans Pelicans', 'Suroeste', 'Willy Hernangómez'),
+(10, 'San Antonio Spurs', 'Suroeste', 'Doug McDermott'),
+(11, 'Golden State Warriors', 'Pacífico', 'Stephen Curry'),
+(12, 'Los Angeles Clippers', 'Pacífico', 'Reggie Jackson'),
+(13, 'Los Angeles Lakers', 'Pacífico', 'LeBron James'),
+(14, 'Phoenix Suns', 'Pacífico', 'Devin Booker '),
+(15, 'Sacramento Kings', 'Pacífico', 'Jeremy Lamb '),
+(16, 'Boston Celtics', 'Atlántico', 'Marcus Smart'),
+(17, 'Brooklyn Nets', 'Atlántico', 'Kevin Durant'),
+(18, 'New York Knicks', 'Atlántico', 'Derrick Rose'),
+(19, 'Philadelphia 76ers', 'Atlántico', 'Joel Embiid'),
+(20, 'Toronto Raptors', 'Atlántico', 'Fred VanVleet'),
+(21, 'Chicago Bulls', 'Central', 'DeMar DeRozan '),
+(22, 'Cleveland Cavaliers', 'Central', 'Ricky Rubio'),
+(23, 'Detroit Pistons', 'Central', 'Killian Hayes'),
+(24, 'Indiana Pacers', 'Central', 'Chris Duarte'),
+(25, 'Milwaukee Bucks', 'Central', 'Giannis Antetokounmpo'),
+(26, 'Atlanta Hawks', 'Sureste', 'Trae Young'),
+(27, 'Charlotte Hornets', 'Sureste', 'Cody Martin'),
+(28, 'Miami Heat', 'Sureste', 'Udonis Haslem'),
+(29, 'Orlando Magic', 'Sureste', 'Devin Cannady'),
+(30, 'Washington Wizards', 'Sureste', 'Bradley Beal');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `jugadores`
+--
+
+CREATE TABLE `jugadores` (
+  `id_jugador` int(11) NOT NULL,
+  `Nombre` varchar(100) NOT NULL,
+  `Edad` int(11) NOT NULL,
+  `Peso` int(11) NOT NULL,
+  `Altura` int(11) NOT NULL,
+  `Posición` varchar(50) NOT NULL,
+  `id_equipo` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `jugadores`
+--
+
+INSERT INTO `jugadores` (`id_jugador`, `Nombre`, `Edad`, `Peso`, `Altura`, `Posición`, `id_equipo`) VALUES
+(1, 'Nikola Jokić', 27, 115, 2, 'Pivot', 1);
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `administradores`
+--
+ALTER TABLE `administradores`
+  ADD PRIMARY KEY (`id_admin`);
 
 --
 -- Indices de la tabla `equipos`
@@ -81,14 +122,43 @@ ALTER TABLE `equipos`
   ADD PRIMARY KEY (`id_equipo`);
 
 --
+-- Indices de la tabla `jugadores`
+--
+ALTER TABLE `jugadores`
+  ADD PRIMARY KEY (`id_jugador`),
+  ADD KEY `FK_id_equipo` (`id_equipo`) USING BTREE;
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `administradores`
+--
+ALTER TABLE `administradores`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `equipos`
 --
 ALTER TABLE `equipos`
   MODIFY `id_equipo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT de la tabla `jugadores`
+--
+ALTER TABLE `jugadores`
+  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `jugadores`
+--
+ALTER TABLE `jugadores`
+  ADD CONSTRAINT `jugadores_ibfk_1` FOREIGN KEY (`id_equipo`) REFERENCES `equipos` (`id_equipo`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
