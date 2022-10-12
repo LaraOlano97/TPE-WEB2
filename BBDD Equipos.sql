@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-10-2022 a las 22:08:02
+-- Tiempo de generación: 13-10-2022 a las 00:28:02
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -52,7 +52,7 @@ CREATE TABLE `equipos` (
 
 INSERT INTO `equipos` (`id_equipo`, `Nombre del Equipo`, `Zona`, `Capitán Equipo`) VALUES
 (1, 'Denver Nuggets', 'Noroeste', 'Nikola Jokić '),
-(2, 'Minnesota Timberwolves', 'Noroeste', 'Patrick Beverley'),
+(2, 'Minnesota Timberwolves', 'Noroeste', 'Russell D\'Angelo'),
 (3, 'Oklahoma City Thunder', 'Noroeste', 'Josh Giddey'),
 (4, 'Portland Trail Blazers', 'Noroeste', 'Damian Lillard'),
 (5, 'Utah Jazz', 'Noroeste', 'Leandro Bolmaro'),
@@ -108,13 +108,101 @@ INSERT INTO `jugadores` (`id_jugador`, `Nombre`, `Edad`, `Peso`, `Altura`, `Posi
 (3, 'Peyton Watson', 20, 91, 2.03, 'Escolta', 1),
 (4, 'Aaron Gordon', 27, 107, 2.03, 'Ala-pivot', 1),
 (5, 'Ish Smith ', 34, 107, 1.83, 'Base', 1),
-(6, 'Leandro Bolmaro', 22, 91, 1.98, 'Alero', 2),
-(7, 'Patrick Beverley', 34, 82, 1.85, 'Base', 2),
+(6, 'Jaden McDaniels', 22, 84, 2.06, 'Alero', 2),
+(7, 'Russell D\'Angelo', 26, 88, 1.93, 'Base', 2),
 (8, 'Malik Beasley', 25, 85, 1.93, 'Escolta', 2),
 (9, 'Nathan Knight', 25, 115, 2.08, 'Ala-pivot', 2),
 (10, 'Naz Reid', 23, 120, 2.06, 'Pivot', 2),
 (11, 'Josh Giddey', 20, 93, 2.06, 'Base', 3),
-(12, 'Luguentz Dort', 23, 98, 1.91, 'Escolta', 3);
+(12, 'Luguentz Dort', 23, 98, 1.91, 'Escolta', 3),
+(13, 'Jeremiah Robinson-Earl', 21, 110, 2.03, 'Alero', 3),
+(14, 'Aleksej Pokuševski', 20, 86, 2.13, 'Pivot', 3),
+(15, 'Mike Muscala', 31, 109, 2.08, 'Ala-pivot', 3),
+(16, 'Drew Eubanks', 25, 111, 2.06, 'Ala-pivot', 4),
+(17, 'Jerami Grant', 28, 95, 2.03, 'Alero', 4),
+(18, 'Keon Johnson', 20, 84, 1.93, 'Escolta', 4),
+(19, 'Damian Lillard', 32, 88, 1.88, 'Base', 4),
+(20, 'Jusuf Nurkić', 28, 132, 2.11, 'Pivot', 4),
+(21, 'Leandro Bolmaro', 22, 91, 1.98, 'Alero', 5),
+(22, 'Udoka Azubuike', 23, 122, 2.13, 'Pivot', 5),
+(23, 'Collin Sexton', 23, 86, 1.85, 'Base', 5),
+(24, 'Stanley Johnson', 26, 110, 1.98, 'Escolta', 5),
+(25, 'Kelly Olynyk', 31, 109, 2.11, 'Ala-pivot', 5),
+(26, 'Luka Dončić', 23, 104, 2.01, 'Escolta', 6),
+(27, 'Jaden Hardy', 20, 90, 1.93, 'Base', 6),
+(28, 'Maximilian Kleber', 30, 109, 2.08, 'Ala-pivot', 6),
+(29, 'Christian Wood', 27, 97, 2.06, 'Alero', 6),
+(30, 'Moses Brown', 22, 111, 2.18, 'Pivot', 6),
+(31, 'Eric Gordon', 33, 98, 1.91, 'Escolta', 7),
+(32, 'Bruno Fernando', 24, 109, 2.06, 'Ala-pivot', 7),
+(33, 'Kenyon Martin Jr.', 21, 98, 1.96, 'Alero', 7),
+(34, 'Dennis Schröder', 29, 78, 1.85, 'Base', 7),
+(35, 'Alperen Şengün', 20, 110, 2.08, 'Pivot', 7),
+(36, 'Kennedy Chandler', 20, 78, 1.83, 'Base', 8),
+(37, 'Brandon Clarke', 26, 98, 2.03, 'Ala-pivot', 8),
+(38, 'Dillon Brooks', 26, 102, 2.01, 'Escolta', 8),
+(39, 'Steven Adams', 29, 120, 2.11, 'Pivot', 8),
+(40, 'Ziaire Williams', 21, 84, 2.06, 'Alero', 8),
+(41, 'Willy Hernangómez', 28, 109, 2.11, 'Ala-pivot', 9),
+(42, 'Jose Alvarado', 24, 81, 1.83, 'Base', 9),
+(43, 'Jaxson Hayes', 22, 100, 2.11, 'Pivot', 9),
+(44, 'Garrett Temple', 36, 88, 1.96, 'Escolta', 9),
+(45, 'Herbert Jones', 24, 93, 2.01, 'Alero', 9),
+(46, 'Doug McDermott', 30, 102, 2.01, 'Alero', 10),
+(47, 'Joshua Primo', 19, 86, 1.95, 'Base', 10),
+(48, 'Romeo Langford', 22, 98, 1.98, 'Escolta', 10),
+(49, 'Jakob Pöltl', 26, 108, 2.16, 'Pivot', 10),
+(50, 'Zach Collins', 24, 113, 2.11, 'Ala-pivot', 10),
+(51, 'Stephen Curry', 34, 87, 1.88, 'Base', 11),
+(52, 'Klay Thompson', 32, 98, 1.98, 'Escolta', 11),
+(53, 'Draymond Green', 32, 104, 1.98, 'Ala-pivot', 11),
+(54, 'Kevon Looney', 26, 100, 2.06, 'Pivot', 11),
+(55, 'Andre Iguodala', 38, 98, 1.98, 'Alero', 11),
+(56, 'Reggie Jackson', 32, 94, 1.88, 'Base', 12),
+(57, 'Nicolas Batum', 33, 104, 2.03, 'Ala-pivot', 12),
+(58, 'Ivica Zubac', 25, 109, 2.13, 'Pivot', 12),
+(59, 'Xavier Moon', 27, 75, 1.88, 'Escolta', 12),
+(60, 'Robert Covington', 31, 95, 2.01, 'Alero', 12),
+(61, 'Anthony Davis', 29, 115, 2.08, 'Ala-pivot', 13),
+(62, 'Thomas Bryant', 25, 112, 2.08, 'Pivot', 13),
+(63, 'Austin Reaves', 24, 89, 1.96, 'Escolta', 13),
+(64, 'LeBron James', 37, 113, 2.06, 'Alero', 13),
+(65, 'Patrick Beverley', 34, 82, 1.85, 'Base', 13),
+(66, 'Devin Booker', 25, 93, 1.96, 'Escolta', 14),
+(67, 'Deandre Ayton', 24, 113, 2.11, 'Pivot', 14),
+(68, 'Chris Paul\r\n', 37, 79, 1.83, 'Base', 14),
+(69, 'Cameron Johnson', 26, 95, 2.03, 'Alero', 14),
+(70, 'Bismack Biyombo', 30, 116, 2.03, 'Ala-pivot', 14),
+(71, 'Jeremy Lamb', 30, 84, 1.96, 'Alero', 15),
+(72, 'De\'Aaron Fox', 24, 82, 1.91, 'Base', 15),
+(73, 'Terence Davis', 25, 91, 1.93, 'Escolta', 15),
+(74, 'Trey Lyles', 26, 109, 2.06, 'Ala-pivot', 15),
+(75, 'Chimezie Metu', 25, 102, 2.11, 'Pivot', 15),
+(76, 'Luke Kornet', 27, 109, 2.18, 'Pivot', 16),
+(77, 'Jaylen Brown', 25, 101, 1.98, 'Escolta', 16),
+(78, 'Blake Griffin', 33, 113, 2.06, 'Ala-pivot', 16),
+(79, 'Marcus Smart', 28, 100, 1.93, 'Base', 16),
+(80, 'Jake Layman', 28, 95, 2.03, 'Alero', 16),
+(81, 'Kevin Durant', 34, 109, 2.08, 'Alero', 17),
+(82, 'Kyrie Irving', 30, 88, 1.88, 'Base', 17),
+(83, 'Day\'Ron Sharpe', 20, 120, 2.06, 'Ala-pivot', 17),
+(84, 'Ben Simmons', 26, 104, 2.11, 'Escolta', 17),
+(85, 'Nicolas Claxton', 23, 100, 2.11, 'Pivot', 17),
+(86, 'Derrick Rose', 34, 91, 1.88, 'Base', 18),
+(87, 'Evan Fournier', 29, 91, 1.98, 'Alero', 18),
+(88, 'Immanuel Quickley', 23, 85, 1.91, 'Escolta', 18),
+(89, 'Jericho Sims', 23, 113, 2.06, 'Pivot', 18),
+(90, 'Obi Toppin', 24, 100, 2.06, 'Ala-pivot', 18),
+(91, 'Joel Embiid', 28, 127, 2.13, 'Pivot', 19),
+(92, 'James Harden', 33, 102, 1.96, 'Base', 19),
+(93, 'Isaiah Joe', 23, 75, 1.93, 'Escolta', 19),
+(94, 'Georges Niang', 29, 104, 2.01, 'Ala-pivot', 19),
+(95, 'Danuel House', 29, 100, 1.98, 'Alero', 19),
+(96, 'Fred VanVleet', 28, 89, 1.85, 'Base', 20),
+(97, 'OG Anunoby', 25, 105, 2.01, 'Alero', 20),
+(98, 'Precious Achiuwa', 23, 102, 2.03, 'Ala-pivot', 20),
+(99, 'Gary Trent Jr.', 23, 95, 1.96, 'Escolta', 20),
+(100, 'Khem Birch', 30, 106, 2.06, 'Pivot', 20);
 
 --
 -- Índices para tablas volcadas
@@ -159,7 +247,7 @@ ALTER TABLE `equipos`
 -- AUTO_INCREMENT de la tabla `jugadores`
 --
 ALTER TABLE `jugadores`
-  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
 -- Restricciones para tablas volcadas
