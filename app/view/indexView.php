@@ -10,12 +10,10 @@ class indexView{
     }
 
     function MostrarHome() {
-        // asigno variables al tpl smarty
-        // $this->smarty->assign('count', count($ejercicios)); 
-        // $this->smarty->assign('ejercicios', $ejercicios);
+
 
         // mostrar el tpl
-        $this->smarty->display('headNav.tpl');
+        $this->smarty->display('index.tpl');
     }
     
 

@@ -3,6 +3,7 @@
 require_once './app\controller\equipoController.php';
 
 require_once './app/controller/indexController.php';
+require_once './app/controller/loginController.php';
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
@@ -18,6 +19,7 @@ $params = explode('/', $action);
 
 $indexController = new indexController();
 $equipoController = new equiposController();
+$loginController= new loginController();
 
 //
 switch ($params[0]) {
@@ -37,5 +39,8 @@ switch ($params[0]) {
         echo ('404 page not found');
         break;
     case 'login':
+        $loginController->mostrarLogin();
+    
+    break;
          
 }

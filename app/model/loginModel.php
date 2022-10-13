@@ -1,2 +1,2 @@
 <?php
-class login{
+class login{}

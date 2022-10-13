@@ -1,8 +1,9 @@
 {include 'headNav.tpl'}
+<div class="jumbotron">
+  <h1 class="display-4">{$equipo->NombreDelEquipo}</h1>
+  <p class="lead">El capitan del equipo es:  {$equipo->CapitanEquipo}</p>
+  <hr class="my-4">
+  <p> El equipo es de la zona:  {$equipo->Zona}</p>
 
-    <div>
-          <h2>{$equipo->NombreDelEquipo}</h2>
-          <h3>{$equipo->Zona}</h3>
-         
-        </div>
-    </div>
+</div>
+  
