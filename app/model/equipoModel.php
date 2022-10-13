@@ -3,7 +3,7 @@ class equipos {
     private $db;
 
     public function __construct() {
-        $this->db = new PDO('mysql:host=localhost;'.'dbname=deudas;charset=utf8', 'root', '');
+        $this->db = new PDO('mysql:host=localhost;'.'dbname=equipos;charset=utf8', 'root', '');
     }
 
     public function obtenerEquipos(){
@@ -15,8 +15,8 @@ class equipos {
         return $equipos;
     }
     public function obtenerEquipo($id){
-        $sentencia = $this->db->prepare("SELECT * FROM `equipos` WHERE id=$id");
-        $sentencia->execute();
+        $sentencia = $this->db->prepare("SELECT * FROM `equipos` WHERE id_equipo=?");
+        $sentencia->execute([$id]);
 
         $equipo = $sentencia->fetch(PDO::FETCH_OBJ);
         

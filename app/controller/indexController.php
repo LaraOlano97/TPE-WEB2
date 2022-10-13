@@ -3,7 +3,6 @@ require_once './app/view/indexView.php';
 
 
 class indexController {
-    private $model;
     private $view;
 
     public function __construct() {
@@ -11,6 +10,6 @@ class indexController {
     }
 
     function Mostrar(){
-        $this->view->index();
+        $this->view->MostrarHome();
     }
 }

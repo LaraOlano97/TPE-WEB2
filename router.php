@@ -36,4 +36,6 @@ switch ($params[0]) {
     default:
         echo ('404 page not found');
         break;
+    case 'login':
+         
 }

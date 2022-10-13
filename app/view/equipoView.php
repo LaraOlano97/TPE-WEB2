@@ -1,22 +1,25 @@
 <?php
+require_once 'libs\smarty\libs\Smarty.class.php';
 
-class equipoView {
+class equipoView{
+    
+    private $smarty;
 
-    function mostrarEquipos($equipos){
-
-        // require_once './templates/header.php'; 
-        echo "<p> </p>";
-        var_dump($equipos);
-        // require_once './templates/footer.php';
-
+    public function __construct() {
+        $this->smarty = new Smarty(); // inicializo Smarty
     }
 
-    function mostrarEquipo($equipo){
+    function mostrarEquipos($equipos) {
+        // asigno variables al tpl smarty
+        $this->smarty->assign('count', count($equipos)); 
+        $this->smarty->assign('equipos', $equipos);
 
-        // require_once './templates/header.php'; 
-        echo "<p> </p>";
-        var_dump($equipo);
-        // require_once './templates/footer.php';
+        // mostrar el tpl
+        $this->smarty->display('equipos.tpl');
     }
-
-}
+   function mostrarEquipo($Equipo){
+    $this->smarty->assign('equipo', $Equipo);
+    $this->smarty->display('equipo.tpl');
+   }
+    
+ }
