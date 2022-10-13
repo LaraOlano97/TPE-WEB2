@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-10-2022 a las 00:28:02
+-- Tiempo de generación: 14-10-2022 a las 00:15:53
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -41,16 +41,16 @@ CREATE TABLE `administradores` (
 
 CREATE TABLE `equipos` (
   `id_equipo` int(11) NOT NULL,
-  `Nombre del Equipo` varchar(100) NOT NULL,
+  `NombreDelEquipo` varchar(100) NOT NULL,
   `Zona` varchar(100) NOT NULL,
-  `Capitán Equipo` varchar(100) NOT NULL
+  `CapitanEquipo` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `equipos`
 --
 
-INSERT INTO `equipos` (`id_equipo`, `Nombre del Equipo`, `Zona`, `Capitán Equipo`) VALUES
+INSERT INTO `equipos` (`id_equipo`, `NombreDelEquipo`, `Zona`, `CapitanEquipo`) VALUES
 (1, 'Denver Nuggets', 'Noroeste', 'Nikola Jokić '),
 (2, 'Minnesota Timberwolves', 'Noroeste', 'Russell D\'Angelo'),
 (3, 'Oklahoma City Thunder', 'Noroeste', 'Josh Giddey'),
@@ -202,7 +202,32 @@ INSERT INTO `jugadores` (`id_jugador`, `Nombre`, `Edad`, `Peso`, `Altura`, `Posi
 (97, 'OG Anunoby', 25, 105, 2.01, 'Alero', 20),
 (98, 'Precious Achiuwa', 23, 102, 2.03, 'Ala-pivot', 20),
 (99, 'Gary Trent Jr.', 23, 95, 1.96, 'Escolta', 20),
-(100, 'Khem Birch', 30, 106, 2.06, 'Pivot', 20);
+(100, 'Khem Birch', 30, 106, 2.06, 'Pivot', 20),
+(101, 'DeMar DeRozan', 33, 100, 1.98, 'Escolta', 21),
+(102, 'Lonzo Ball', 24, 86, 1.98, 'Base', 21),
+(103, 'Derrick Jones Jr.', 25, 95, 1.98, 'Alero', 21),
+(104, 'Andre Drummond', 29, 127, 2.08, 'Pivot', 21),
+(105, 'Tristan Thompson', 31, 115, 2.06, 'Ala-pivot', 21),
+(106, 'Ricky Rubio', 31, 86, 1.88, 'Base', 22),
+(107, 'Lamar Stevens', 25, 104, 1.98, 'Alero', 22),
+(108, 'Caris LeVert', 28, 93, 1.98, 'Escolta', 22),
+(109, 'Robin Lopez', 34, 125, 2.13, 'Pivot', 22),
+(110, 'Kevin Love', 34, 114, 2.03, 'Ala-pivot', 22),
+(111, 'Killian Hayes', 21, 88, 1.96, 'Base', 23),
+(112, 'Saddiq Bey', 23, 98, 2.01, 'Alero', 23),
+(113, 'Alec Burks', 31, 97, 1.98, 'Escolta', 23),
+(114, 'Jalen Duren', 18, 113, 2.11, 'Pivot', 23),
+(115, 'Nerlens Noel', 28, 100, 2.11, 'Pivot', 23),
+(116, 'Chris Duarte', 25, 86, 1.96, 'Base', 24),
+(117, 'Buddy Hield', 29, 100, 1.93, 'Escolta', 24),
+(118, 'Oshae Brissett', 24, 95, 2.01, 'Alero', 24),
+(119, 'Goga Bitadze', 23, 113, 2.13, 'Pivot', 24),
+(120, 'Isaiah Jackson', 20, 93, 2.08, 'Ala-pivot', 24),
+(121, 'Giannis Antetokounmpo', 27, 110, 2.11, 'Alero', 25),
+(122, 'Thanasis Antetokounmpo', 30, 99, 1.98, 'Escolta', 25),
+(123, 'Jevon Carter', 27, 91, 1.85, 'Base', 25),
+(124, 'Brook Lopez', 34, 128, 2.13, 'Pivot', 25),
+(125, 'Serge Ibaka', 33, 107, 2.08, 'Ala-pivot', 25);
 
 --
 -- Índices para tablas volcadas
@@ -247,7 +272,7 @@ ALTER TABLE `equipos`
 -- AUTO_INCREMENT de la tabla `jugadores`
 --
 ALTER TABLE `jugadores`
-  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
 
 --
 -- Restricciones para tablas volcadas
