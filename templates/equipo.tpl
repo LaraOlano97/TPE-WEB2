@@ -5,5 +5,6 @@
   <hr class="my-4">
   <p> El equipo es de la zona:  {$equipo->Zona}</p>
 
-</div>
-  
+  <h2>Jugadores de {$equipo->NombreDelEquipo}</h2>
+
+  {include 'jugadores.tpl'}

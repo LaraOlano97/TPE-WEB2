@@ -1,9 +1,11 @@
 <?php
 
 require_once './app\controller\equipoController.php';
-
+require_once './app/controller/registerController.php';
 require_once './app/controller/indexController.php';
 require_once './app/controller/loginController.php';
+
+require_once './app/controller/jugadoresController.php';
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
@@ -20,7 +22,8 @@ $params = explode('/', $action);
 $indexController = new indexController();
 $equipoController = new equiposController();
 $loginController= new loginController();
-
+$registerController= new registerController();
+$jugadoresController=new jugadoresController();
 //
 switch ($params[0]) {
     case 'inicio':
@@ -33,6 +36,7 @@ switch ($params[0]) {
             }
             else{
                 $equipoController->mostrarEquipo($params[1]);
+                $jugadoresController->mostrarJugadores($params[1]);
             }
             break;
     default:
@@ -42,5 +46,7 @@ switch ($params[0]) {
         $loginController->mostrarLogin();
     
     break;
-         
+    case 'register':
+        $registerController->MostrarRegistro();
+         break;
 }

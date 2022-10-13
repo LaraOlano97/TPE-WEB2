@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 04:12:59
+/* Smarty version 4.2.1, created on 2022-10-13 19:38:42
   from 'C:\xampp\htdocs\TPE-WEB2\templates\equipos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6347742b8c7dc1_26816801',
+  'unifunc' => 'content_63484d22cc80a3_95690100',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9131a167d9ebd82ea50f36552093912bfa366e63' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE-WEB2\\templates\\equipos.tpl',
-      1 => 1665627178,
+      1 => 1665628072,
       2 => 'file',
     ),
   ),
@@ -21,9 +21,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:headNav.tpl' => 1,
   ),
 ),false)) {
-function content_6347742b8c7dc1_26816801 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63484d22cc80a3_95690100 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:headNav.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
+
    <main class="container mt-5">
         <section class="equipos">
             <?php

@@ -14,6 +14,9 @@ class equipos {
         
         return $equipos;
     }
+
+    
+
     public function obtenerEquipo($id){
         $sentencia = $this->db->prepare("SELECT * FROM `equipos` WHERE id_equipo=?");
         $sentencia->execute([$id]);

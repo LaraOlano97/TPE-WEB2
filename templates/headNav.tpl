@@ -19,6 +19,12 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="equipos">Equipos</a>
                   </li>
+                   <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="login">Loguearse</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="register">Registrarse</a>
+                  </li>
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Dropdown
                     </a>

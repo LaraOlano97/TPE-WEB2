@@ -16,6 +16,7 @@ class equiposController {
         $equipos = $this->model->obtenerEquipos();
         $this->view->mostrarEquipos($equipos);
     }
+ 
 
     public function mostrarEquipo($id){
        $Equipo = $this->model->obtenerEquipo($id);

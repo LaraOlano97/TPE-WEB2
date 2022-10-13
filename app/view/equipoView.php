@@ -17,9 +17,14 @@ class equipoView{
         // mostrar el tpl
         $this->smarty->display('equipos.tpl');
     }
+    function mostrarJugadores($jugadores){
+     $this->smarty->assign('jugadores', $jugadores);
+     $this->smarty->display('equipo.tpl');
+    }
    function mostrarEquipo($Equipo){
     $this->smarty->assign('equipo', $Equipo);
     $this->smarty->display('equipo.tpl');
    }
+    
     
  }

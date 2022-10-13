@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 04:25:48
+/* Smarty version 4.2.1, created on 2022-10-13 22:40:04
   from 'C:\xampp\htdocs\TPE-WEB2\templates\headNav.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6347772c73d054_29246592',
+  'unifunc' => 'content_634877a4dd9fd8_32782829',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f329e1fdb490d3429296ae495964ba64c8689bf6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE-WEB2\\templates\\headNav.tpl',
-      1 => 1665627946,
+      1 => 1665693603,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6347772c73d054_29246592 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634877a4dd9fd8_32782829 (Smarty_Internal_Template $_smarty_tpl) {
 ?> <head>
         <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="styles/style.css"/>
@@ -41,6 +41,12 @@ function content_6347772c73d054_29246592 (Smarty_Internal_Template $_smarty_tpl)
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="equipos">Equipos</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="login">Loguearse</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="register">Registrarse</a>
                   </li>
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Dropdown
