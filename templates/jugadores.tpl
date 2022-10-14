@@ -1,3 +1,4 @@
+ 
    <main class="container mt-5">
         <section class="equipos">
     

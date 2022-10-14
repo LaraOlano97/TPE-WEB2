@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 22:40:04
+/* Smarty version 4.2.1, created on 2022-10-15 00:11:11
   from 'C:\xampp\htdocs\TPE-WEB2\templates\jugadores.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634877a4e0d1f2_45777423',
+  'unifunc' => 'content_6349de7f9a7527_79132409',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f680278eafd5162c74e0dfe919eb2bce18c34457' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE-WEB2\\templates\\jugadores.tpl',
-      1 => 1665693559,
+      1 => 1665785470,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634877a4e0d1f2_45777423 (Smarty_Internal_Template $_smarty_tpl) {
-?>   <main class="container mt-5">
+function content_6349de7f9a7527_79132409 (Smarty_Internal_Template $_smarty_tpl) {
+?> 
+   <main class="container mt-5">
         <section class="equipos">
     
             <?php

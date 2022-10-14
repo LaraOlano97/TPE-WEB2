@@ -11,6 +11,7 @@ class jugadoresView{
     }
 
 function mostrarJugadores($jugadores){
+    $this->smarty->assign('count', count($jugadores)); 
      $this->smarty->assign('jugadores', $jugadores);
      $this->smarty->display('jugadores.tpl');
     }}

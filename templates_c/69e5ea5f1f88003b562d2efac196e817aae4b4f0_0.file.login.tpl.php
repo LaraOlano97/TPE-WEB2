@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 19:49:30
+/* Smarty version 4.2.1, created on 2022-10-14 06:10:26
   from 'C:\xampp\htdocs\TPE-WEB2\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63484faa0a4322_87761269',
+  'unifunc' => 'content_6348e13259a4e0_38531461',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '69e5ea5f1f88003b562d2efac196e817aae4b4f0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE-WEB2\\templates\\login.tpl',
-      1 => 1665682894,
+      1 => 1665719334,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63484faa0a4322_87761269 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6348e13259a4e0_38531461 (Smarty_Internal_Template $_smarty_tpl) {
 ?> <head>
         <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="styles/style.css"/>
@@ -32,13 +32,13 @@ function content_63484faa0a4322_87761269 (Smarty_Internal_Template $_smarty_tpl)
          </head>
 <body>
 
-   <form action="validar.php" method="post">
+   <form action="validar" method="post">
 
    <h1 class="animate__animated animate__backInLeft">Sistema de login para administradores</h1>
 
-   <p>Usuario <input type="text" placeholder="ingrese su nombre" name="usuario"></p>
+   <p>Usuario <input name="usuario" type="text" placeholder="ingrese su nombre" name="usuario"></p>
 
-   <p>Contraseña <input type="password" placeholder="ingrese su contraseña" name="contraseña"></p>
+   <p>Contraseña <input name="contrasenia" type="password" placeholder="ingrese su contraseña" name="contraseña"></p>
    
    <input type="submit" value="Ingresar">
    
