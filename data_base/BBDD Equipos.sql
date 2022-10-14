@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-10-2022 a las 00:15:53
+-- Tiempo de generación: 14-10-2022 a las 21:54:02
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -227,7 +227,32 @@ INSERT INTO `jugadores` (`id_jugador`, `Nombre`, `Edad`, `Peso`, `Altura`, `Posi
 (122, 'Thanasis Antetokounmpo', 30, 99, 1.98, 'Escolta', 25),
 (123, 'Jevon Carter', 27, 91, 1.85, 'Base', 25),
 (124, 'Brook Lopez', 34, 128, 2.13, 'Pivot', 25),
-(125, 'Serge Ibaka', 33, 107, 2.08, 'Ala-pivot', 25);
+(125, 'Serge Ibaka', 33, 107, 2.08, 'Ala-pivot', 25),
+(126, 'Trae Young', 24, 74, 1.85, 'Base', 26),
+(127, 'Justin Holiday', 33, 82, 1.98, 'Alero', 26),
+(128, 'Bogdan Bogdanović', 30, 93, 1.98, 'Escolta', 26),
+(129, 'Clint Capela', 28, 109, 2.08, 'Pivot', 26),
+(130, 'John Collins', 25, 103, 2.06, 'Ala-pivot', 26),
+(131, 'Cody Martin', 27, 93, 1.96, 'Alero', 27),
+(132, 'LaMelo Ball', 21, 81, 2.01, 'Base', 27),
+(133, 'P. J. Washington', 24, 104, 2.01, 'Ala-pivot', 27),
+(134, 'Kelly Oubre', 26, 92, 2.01, 'Escolta', 27),
+(135, 'Kai Jones', 21, 100, 2.08, 'Pivot', 27),
+(136, 'Udonis Haslem', 42, 107, 2.03, 'Ala-pivot', 28),
+(137, 'Kyle Lowry', 36, 85, 1.83, 'Base', 28),
+(138, 'Nikola Jović', 19, 109, 2.11, 'Pivot', 28),
+(139, 'Caleb Martin', 27, 93, 1.96, 'Alero', 28),
+(140, 'Tyler Herro', 22, 88, 1.96, 'Escolta', 28),
+(141, 'Devin Cannady', 26, 83, 1.88, 'Base', 29),
+(142, 'Mohamed Bamba', 24, 105, 2.13, 'Pivot', 29),
+(143, 'Paolo Banchero', 19, 113, 2.08, 'Ala-pivot', 29),
+(144, 'Franz Wagner', 21, 100, 2.08, 'Alero', 29),
+(145, 'Gary Harris', 28, 95, 1.93, 'Escolta', 29),
+(146, 'Bradley Beal', 29, 94, 1.93, 'Escolta', 30),
+(147, 'Deni Avdija', 21, 95, 2.06, 'Alero', 30),
+(148, 'Daniel Gafford', 24, 106, 2.06, 'Ala-pivot', 30),
+(149, 'Taj Gibson', 37, 105, 2.06, 'Ala-pivot', 30),
+(150, 'Kristaps Porziņģis', 27, 109, 2.21, 'Pivot', 30);
 
 --
 -- Índices para tablas volcadas
@@ -272,7 +297,7 @@ ALTER TABLE `equipos`
 -- AUTO_INCREMENT de la tabla `jugadores`
 --
 ALTER TABLE `jugadores`
-  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
+  MODIFY `id_jugador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
 
 --
 -- Restricciones para tablas volcadas
